@@ -25,7 +25,7 @@ Ext.define('CustomApp', {
             },
         scope: this
              },
-        fetch: ['FormattedID', 'Name','ToDo']
+        fetch: ['FormattedID','Name','TaskEstimateTotal','TaskRemainingTotal', 'TaskActualTotal' ]
         });
      },
      _loadGrid: function(myStorystore) {
@@ -34,11 +34,12 @@ Ext.define('CustomApp', {
             columnCfgs: [
             'FormattedID',
             'Name',
-            'Todo'
+            'TaskEstimateTotal',
+            'TaskRemainingTotal',
+            'TaskActualTotal'
                  ]
        });
            this.add(myGrid);
        console.log("what is this", this);
       }
 });
-
